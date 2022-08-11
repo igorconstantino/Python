@@ -1,0 +1,5 @@
+nome = input('Digite seu nome completo: ')
+nomeDividido = nome.split()
+tamanhoDividido = len(nomeDividido)
+print('Primeiro: ', nomeDividido[0])
+print('Último: ', nomeDividido[tamanhoDividido - 1])
