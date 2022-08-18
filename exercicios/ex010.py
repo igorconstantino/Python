@@ -1,2 +1,2 @@
-reais = float(input('Quantos rais você tem?'))
-print('Você tem então U${} dólares'.format(reais / 5.12))
+reais = float(input('Quantos reais você tem?'))
+print('Você tem então U${:.2f} dólares'.format(reais / 5.12))
