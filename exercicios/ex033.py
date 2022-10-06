@@ -3,6 +3,7 @@ num2 = int(input('Digite um número: '))
 num3 = int(input('Digite um número: '))
 
 maior = num1
+
 if num2 > num1:
     maior = num2
     if num3 > num2:
