@@ -1,12 +1,11 @@
-from datetime import date
-anoAtual = date.today().year
+nota1 = float(input('Digite sua primeira nota: '))
+nota2 = float(input('Digite sua segunda nota: '))
 
-anoNasc = int(input('Digite o ano de seu nascimento: '))
-idade = anoAtual - anoNasc
+media = (nota1 + nota2) / 2
 
-if idade < 18:
-    print('Ainda não chegou sua hora de se alistar, ainda faltam {} anos!'.format(18 - idade))
-elif idade > 18:
-    print('Já passou da hora de você se alistar, se passaram {} anos!'.format(idade - 18))
+if media < 5.0:
+    print('REPROVADO!')
+elif media > 7.0:
+    print('APROVADO!')
 else:
-    print('É hora de você se alistar!')
+    print('RECUPERAÇÃO!')

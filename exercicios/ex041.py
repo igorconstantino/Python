@@ -1,11 +1,14 @@
-nota1 = float(input('Digite sua primeira nota: '))
-nota2 = float(input('Digite sua segunda nota: '))
+from datetime import date
 
-media = (nota1 + nota2) / 2
+ano_atual = date.today().year
+ano_nascimento = int(input('Digite o ano de seu nascimento: '))
+idade = ano_atual - ano_nascimento
 
-if media < 5.0:
-    print('REPROVADO!')
-elif media > 7.0:
-    print('APROVADO!')
+if idade <= 9:
+    print('Você é um nadador mirim.')
+elif idade <= 14:
+    print('Você é um nadador infantil.')
+elif idade <= 19:
+    print('Você é um nadador sênior.')
 else:
-    print('RECUPERAÇÃO!')
+    print('Você é um nadador master.')

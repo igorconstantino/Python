@@ -1,17 +1,9 @@
-num = int(input('Digite um número: '))
+num1 = int(input('Digite o numero 1:'))
+num2 = int(input('Digite o numero 2:'))
 
-print('Escreva para qual base deseja converter')
-print("""(1) - Binária
-(2) - Octal
-(3) - Hexadecimal """)
-
-opcao = int(input())
-
-if opcao == 1:
-
-elif opcao == 2:
-
-elif opcao == 3:
-
+if num1 > num2:
+    print('O maior número é o {}'.format(num1))
+elif num2 > num1:
+    print('O maior número é o {}'.format(num2))
 else:
-    print('Digite um número válido!')
+    print('\nOs dois são iguais')

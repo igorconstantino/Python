@@ -1,12 +1,17 @@
-valorCasa = float(input('Qual o valor da casa?'))
-salario = float(input('Qual seu salario?'))
-anos = int(input('Em quantos anos pretende pagar?'))
+num = int(input('Digite um número: '))
 
-prestacao = valorCasa / (anos * 12)
+print('Escreva para qual base deseja converter')
+print("""(1) - Binária
+(2) - Octal
+(3) - Hexadecimal """)
 
-print('\nO valor da prestação é: R${:.2f}'.format(prestacao))
+opcao = int(input())
 
-if prestacao > salario * 1.3:
-    print('\nDesculpe, você não pode pagar a casa!')
+if opcao == 1:
+    print(bin(num)[2:])
+elif opcao == 2:
+    print(oct(num)[2:])
+elif opcao == 3:
+    print(hex(num)[2:])
 else:
-    print('\nParabéns, você pode comprar a casa!')
+    print('Digite um número válido!')

@@ -1,9 +1,12 @@
-num1 = int(input('Digite o numero 1:'))
-num2 = int(input('Digite o numero 2:'))
+from datetime import date
+anoAtual = date.today().year
 
-if num1 > num2:
-    print('O maior número é o {}'.format(num1))
-elif num2 > num1:
-    print('O maior número é o {}'.format(num2))
+anoNasc = int(input('Digite o ano de seu nascimento: '))
+idade = anoAtual - anoNasc
+
+if idade < 18:
+    print('Ainda não chegou sua hora de se alistar, ainda faltam {} anos!'.format(18 - idade))
+elif idade > 18:
+    print('Já passou da hora de você se alistar, se passaram {} anos!'.format(idade - 18))
 else:
-    print('\nOs dois são iguais')
+    print('É hora de você se alistar!')
