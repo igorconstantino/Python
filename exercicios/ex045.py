@@ -42,3 +42,5 @@ elif jogada_pc == 'Tesoura':
         print('PERDEU!')
     elif jogada_user == 'Tesoura':
         print('EMPATE!')
+
+print(f'O computador jogou {jogada_pc}')
