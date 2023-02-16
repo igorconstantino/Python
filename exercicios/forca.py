@@ -1,10 +1,9 @@
 palavra = 'extintor'
-lista_palavra = list(palavra)
 palavra_codificada = []
 lista_ocorrencias = []
 contador = 0
 
-for i in range(len(lista_palavra)):
+for i in range(len(palavra)):
     palavra_codificada.append('*')
 
 while True:
@@ -28,5 +27,5 @@ while True:
     if nova_palavra == palavra:
         break
 
-print('PARABÉNS VOCÊ ACERTOU!!!')
+print('\nPARABÉNS VOCÊ ACERTOU!!!')
 print(f'Foram necessárias {contador} tentativas!')
