@@ -1,5 +1,5 @@
-from lib.interface import *
-from lib.arquivo import *
+from biblioteca.interface import *
+from biblioteca.arquivo import *
 
 nome_arquivo = 'pessoas.txt'
 
