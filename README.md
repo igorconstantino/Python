@@ -1,3 +1,3 @@
 # python
  
-Curso de Python
+Curso de Python 3
