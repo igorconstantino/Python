@@ -1,31 +1,33 @@
-palavra = 'extintor'
-palavra_codificada = []
-lista_ocorrencias = []
-contador = 0
+import os
 
-for i in range(len(palavra)):
-    palavra_codificada.append('*')
+palavra_secreta = 'academia'
+letras_acertadas = ''
+numero_tentativas = 0
 
 while True:
-    letra = input('Digite uma letra: ').strip()
-    contador += 1
+    letra_digitada = input('Digite uma letra: ')
+    numero_tentativas += 1
 
-    if letra in palavra:
-        for i in range(len(palavra)):
-            if letra == palavra[i]:
-                lista_ocorrencias.append(i)
+    if len(letra_digitada) > 1:
+        print('Digite apenas uma letra.')
+        continue
 
-    for i in range(len(lista_ocorrencias)):
-        palavra_codificada[lista_ocorrencias[i]] = letra
+    if letra_digitada in palavra_secreta:
+        letras_acertadas += letra_digitada
 
-    lista_ocorrencias.clear()
+    palavra_formada = ''
+    for letra_secreta in palavra_secreta:
+        if letra_secreta in letras_acertadas:
+            palavra_formada += letra_secreta
+        else:
+            palavra_formada += '*'
 
-    nova_palavra = ''.join(palavra_codificada)
+    print('Palavra formada:', palavra_formada)
 
-    print(f'A palavra se encontra assim: {nova_palavra}')
-
-    if nova_palavra == palavra:
-        break
-
-print('\nPARABÉNS VOCÊ ACERTOU!!!')
-print(f'Foram necessárias {contador} tentativas!')
+    if palavra_formada == palavra_secreta:
+        os.system('clear')
+        print('VOCÊ GANHOU!! PARABÉNS!')
+        print('A palavra era', palavra_secreta)
+        print('Tentativas:', numero_tentativas)
+        letras_acertadas = ''
+        numero_tentativas = 0
