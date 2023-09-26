@@ -9,6 +9,6 @@ print(lista2)
 
 ################################################
 
-dicionario = {'nome': 'Igor', 'idade': 21,}
+dicionario = {'nome': 'Igor', 'idade': 21}
 lista3 = [(key, value) for key, value in dicionario.items()]
 print(lista3)
