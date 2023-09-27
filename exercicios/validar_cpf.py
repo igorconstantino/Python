@@ -64,3 +64,4 @@ if cpf_gerado == cpf_user:
     print('CPF válido.')
 else:
     print('CPF inválido!')
+
