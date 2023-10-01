@@ -1,10 +1,11 @@
 todo = []
 todo_aux = []
 
+
 def listar(lista):
     if not lista:
         return
-    
+
     print('TAREFAS:')
     for i, item in enumerate(lista):
         print(f'{i}) {item}')
@@ -31,7 +32,7 @@ while True:
 
         listar(todo)
 
-    elif op == '3':  
+    elif op == '3':
         todo.append(todo_aux[-1])
         todo_aux.pop(-1)
 
