@@ -1,10 +1,10 @@
 version: '3.9'
 services:
-  mysql_container:
+  mysql_cont:
     env_file:
       - .env
-    container_name: mysql_container
-    hostname: mysql_container
+    container_name: mysql_cont
+    hostname: mysql_cont
     image: mysql:8
     restart: always
     command:
@@ -13,7 +13,7 @@ services:
       - --collation-server=utf8mb4_unicode_ci
       - --innodb_force_recovery=0
     volumes:
-      - ./mysql_container:/var/lib/mysql
+      - ./mysql_cont:/var/lib/mysql
     ports:
       - 3306:3306
     environment:
